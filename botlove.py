@@ -9,10 +9,10 @@ from telegram.ext import (
     filters
 )
 
-TOKEN = "8361644702:AAGwl2QbElpJZn7_bVgPJS4DnAUfH1ULcF8"
+import os
 
+TOKEN = os.getenv("TOKEN")
 app = ApplicationBuilder().token(TOKEN).build()
-
 
 async def hug(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
